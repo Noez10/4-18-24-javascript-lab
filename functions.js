@@ -4,15 +4,20 @@
   Call the function.
 */
 
-// CODE HERE
+function helloWorld() {
+  console.log("Hello, World!");
+}
 
+helloWorld();
 ////////////////// PROBLEM 2 ////////////////////
 
 /*
     Write a function called 'jsPro' that returns the string: 'I am a JavaScript pro!'
 */
 
-//CODE HERE
+function jsPro() {
+  console.log("I am a Javascript pro!");
+}
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -21,7 +26,11 @@
   Call the function, passing in an argument.
 */
 
-//CODE HERE
+function printName(name) {
+  console.log(name);
+}
+
+printName();
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -33,7 +42,11 @@
   Make sure to call your function and pass in an argument.
 */
 
-//CODE HERE
+function greeting(name) {
+  console.log("Hello ", name);
+} 
+
+greeting("Noe");
 
 ////////////////// PROBLEM 5 ////////////////////
 
@@ -47,7 +60,13 @@
     time on this if you have wiggle room).
 */
 
-//CODE HERE
+function compareNums(num1,num2) {
+  num1 >= num2 ? console.log(num1) : console.log(num2);
+} 
+
+//condition ? exprIfTrue : exprIfFalse
+
+compareNums(234,56);
 
 /*
     The following problems are extreme challenges that will require you to do some additional research.
@@ -67,7 +86,20 @@
       results (or return) of a function into a variable!
 */
 
-//CODE HERE
+function nameCheck(name){
+  switch (name) {
+    case "Steven":
+      console.log("What is up Steven?");
+      break;
+    case "Bryan":
+      console.log("Hey Bryan!");
+      break;
+    default:
+      console.log("Cool name, ", name);
+  }
+}
+
+nameCheck("Noe");
 
 ////////////////// PROBLEM 7 ////////////////////
 const namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
@@ -77,7 +109,13 @@ const namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
   Call the function, passing in the `namesArr` array (above).
 */
 
-//CODE HERE
+function printAllNames(nnArr) {
+  for(i = 0; i < nnArr.length; i++) {
+    console.log(nnArr[i]);
+  }
+}
+
+printAllNames(namesArr);
 
 ////////////////// PROBLEM 8 ////////////////////
 /*
@@ -90,3 +128,27 @@ const namesArr = ["Cameron", "Riley", "Eric", "Brenna", "Karl"];
     You will have to look up arrow functions in JavaScript to complete this task. Arrow
     functions are just another way of writing functions.
 */
+
+
+/* function weatherCheck(weather){
+
+  if(weather == "sunny") {
+      console.log("What a lovely day!");
+}   else if (weather == "rainy"){
+      console.log("Time for an umbrella");
+}   else if (weather == "snowy") {
+      console.log("Hot chocolate sounds delicious");
+}   else {
+      console.log("time for a nap");
+  }
+}
+*/
+
+const weatherCheck = (weather) => {
+  weather === "sunny" ? console.log("What a lovely day!") :
+  weather === "rainy" ? console.log("Time for an umbrella") :
+  weather === "snowy" ? console.log("Hot chocolate sounds delicious") :
+  console.log("time for a nap");
+}
+
+weatherCheck("rainy");
